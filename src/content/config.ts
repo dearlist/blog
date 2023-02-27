@@ -13,10 +13,7 @@ const blog = defineCollection({
 		updatedDate: z
 			.string()
 			.optional()
-			.transform((str) => (str ? new Date(str) : undefined)),
-		'typora-root-url':z.string().optional().transform((str)=>{
-			return str ?  '/vue3' : undefined
-		})
+			.transform((str) => (str ? new Date(str) : undefined))
 	}),
 });
 
